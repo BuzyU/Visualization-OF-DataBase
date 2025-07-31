@@ -10,5 +10,19 @@
 <body>
   <h1>Your Categories</h1>
   <div id="categoryTree"></div>
+  <div id="backend-status">Checking backend...</div>
+
+<script>
+  fetch("https://dynamic-server.onrender.com/ping")
+    .then((res) => res.text())
+    .then((text) => {
+      document.getElementById("backend-status").textContent = "✅ Connected: " + text;
+    })
+    .catch((err) => {
+      console.error("Backend error:", err);
+      document.getElementById("backend-status").textContent = "❌ Backend not reachable";
+    });
+</script>
+
 </body>
 </html>
