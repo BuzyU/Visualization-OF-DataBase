@@ -1,0 +1,7 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+#categoryTree div {
+  margin-bottom: 5px;
+}
