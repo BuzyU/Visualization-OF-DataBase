@@ -16,7 +16,11 @@ onAuthStateChanged(auth, async (user) => {
     const token = await user.getIdToken();
     localStorage.setItem("idToken", token); // Optional
 
+<<<<<<< HEAD
     fetch("http://localhost:3000/api/category/tree", {
+=======
+    fetch("https://dynamic-server.onrender.com/api/category/tree", {
+>>>>>>> d1f1982 (Configure Firebase Hosting + GitHub Actions)
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`
@@ -51,6 +55,7 @@ function renderTree(categories, container = document.getElementById('categoryTre
     }
     container.appendChild(div);
   });
+<<<<<<< HEAD
 
   function displayCategoryTree(categories) {
   const container = document.getElementById("categoryTree");
@@ -62,4 +67,12 @@ function renderTree(categories, container = document.getElementById('categoryTre
     container.appendChild(div);
   });
 }
+=======
+}
+
+function displayCategoryTree(categories) {
+  const container = document.getElementById("categoryTree");
+  container.innerHTML = "";
+  renderTree(categories, container); // Use recursive renderer
+>>>>>>> d1f1982 (Configure Firebase Hosting + GitHub Actions)
 }

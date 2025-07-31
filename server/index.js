@@ -16,8 +16,13 @@ admin.initializeApp({
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+<<<<<<< HEAD
 app.use(cors());
 app.use(bodyParser.json());
+=======
+const cors = require('cors');
+app.use(cors());
+>>>>>>> d1f1982 (Configure Firebase Hosting + GitHub Actions)
 
 // Auth middleware
 app.use(async (req, res, next) => {
