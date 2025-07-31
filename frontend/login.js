@@ -22,7 +22,7 @@ function googleLogin() {
     .then(result => result.user.getIdToken())
     .then(idToken => {
       localStorage.setItem("idToken", idToken);
-      window.location.href = "/frontend/dashboard.html";
+      window.location.href = "/dashboard.html";
     })
     .catch(err => {
       console.error("Google login failed:", err);

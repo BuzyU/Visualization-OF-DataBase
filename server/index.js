@@ -43,6 +43,10 @@ app.use(async (req, res, next) => {
   }
 });
 
+app.get("/ping", (req, res) => {
+  res.send("pong from server");
+});
+
 // API routes
 app.use('/api/category', categoryRoutes);
 app.use('/api/entry', entryRoutes);
