@@ -16,9 +16,6 @@ admin.initializeApp({
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const cors = require('cors');
-const bodyParser = require('body-parser'); // Make sure this is also imported if used
-
 app.use(cors());
 app.use(bodyParser.json());
 
